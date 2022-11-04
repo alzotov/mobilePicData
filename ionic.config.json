@@ -1,0 +1,7 @@
+{
+  "name": "mobilePicData",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
