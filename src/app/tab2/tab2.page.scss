@@ -1,0 +1,10 @@
+.image-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0,255,0);
+  font-size: 15vw;
+  //text-shadow: 0 0 10px #FF0000, 0 0 15px #0000FF;
+  text-shadow: 0 0 15px #0000FF;
+}
