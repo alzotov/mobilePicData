@@ -47,7 +47,7 @@ export class PimeyesService {
     console.log(headers);
     return this.http.post<ApiResult>(
       "https://pimeyes.com/api/upload/file",
-      file,
+      { image: file },
       {headers}
     )
     .pipe(tap(_ => console.log('pimeyes call completed')));

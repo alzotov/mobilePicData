@@ -30,15 +30,15 @@ export class PhotoService {
 
     const base64Data = await this.readAsBase64(capturedPhoto);
     console.log(base64Data);
-    let rz,facesNo=0;
+    let rz; let facesNo=0;
     try{
       rz = await this.api.getFacesNumber(base64Data).toPromise();
       console.log('image recognition result',rz);
-      facesNo = rz.body.faces.length;
+      facesNo = rz.faces.length;
       console.log('no. faces recognized',facesNo);
     }
     catch(e){
-      console.log("pimeyes call failed");
+      console.log("pimeyes call failed",e);
     }
 
     const savedImageFile = await this.savePicture(capturedPhoto,facesNo);
